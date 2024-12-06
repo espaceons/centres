@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<head>
+  <title>
+    {% block title %}
+    Formation &mdash; Proffessionnelle
+    {% endblock %}
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--css-->
+    {% include 'vitrine/css.html' %}
+    <!--css-->
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    
+          <!-- surnav-->
+          {% include "vitrine/surnav.html" %}
+          <!-- surnav-->
+     
+        <!--header-->
+        {% include "vitrine/header.html" %}
+        <!--header-->
+
+    {% block content %}
+
+    {% endblock %}
+
+
+    
+    <!--scrouler-->
+  
+    <!--scrouler-->
+    
+
+    <div></div>
+
+    <!--pourqoi la formation Pro-->
+    
+    <!--pourqoi la formation Pro-->
+
+    <!--about-->
+    
+    <!--about-->
+
+    <!-- // 05 - Block -->
+    <!--Témoignages-->
+   
+    <!--Témoignages-->
+    
+
+    <!--presentation-->
+    
+    <!--presentation-->
+    
+    <div class="news-updates">
+      <div class="container">
+         
+        <!--news-->
+        
+        <!--news-->
+      </div>
+    </div>
+
+    <!--abonnez vous-->
+    
+    <!--abonnez vous-->
+
+
+      <!--footer-->
+ 
+    <!--footer-->
+    
+
+  </div>
+  <!-- .site-wrap -->
+
+
+  <!-- loader
+  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#51be78"/></svg></div> -->
+<!--js-->
+  {% include 'vitrine/js.html' %}
+<!--js-->
+</body>
+
+</html>

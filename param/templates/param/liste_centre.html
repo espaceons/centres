@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liste des centres</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Code centre</th>
+          <th scope="col">Nom centre</th>
+          <th scope="col">Description</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      {% for c in centre %}
+      <tbody>
+        <tr>
+          <td>{{c.code}}</td>
+          <td>{{c.nom}}</td>
+          <td>{{c.description}}</td>
+          <td>
+            <button class="btn btn-warning"><a href="{% url 'param:update' c.id %}">Update</a></button>&nbsp;&nbsp;
+            <button class="btn btn-danger"><a href="{% url 'param:delete' c.id %}">Delete</a></button>
+          </td>
+        </tr>
+      </tbody>
+      {% endfor %}
+    </table>
+  </body>
+</html>
