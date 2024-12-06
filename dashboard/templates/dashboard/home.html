@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="zxx">
   <head>
@@ -23,21 +24,21 @@
     <!-- ======= BEGIN GLOBAL MANDATORY STYLES ======= -->
     <link
       rel="stylesheet"
-      href="../../assets/bootstrap/css/bootstrap.min.css"
+      href="{% static 'dashboard/assets/bootstrap/css/bootstrap.min.css' %}"
     />
-    <link rel="stylesheet" href="../../assets/fonts/icofont/icofont.min.css" />
+    <link rel="stylesheet" href="{% static 'dashboard/assets/fonts/icofont/icofont.min.css' %}" />
     <link
       rel="stylesheet"
-      href="../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.css"
+      href="{% static 'dashboard/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.css' %}"
     />
     <!-- ======= END BEGIN GLOBAL MANDATORY STYLES ======= -->
 
     <!-- ======= BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
-    <link rel="stylesheet" href="../../assets/plugins/apex/apexcharts.css" />
+    <link rel="stylesheet" href="{% static 'dashboard/assets/plugins/apex/apexcharts.css' %}" />
     <!-- ======= END BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
 
     <!-- ======= MAIN STYLES ======= -->
-    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="{% static 'dashboard/assets/css/style.css' %}" />
     <!-- ======= END MAIN STYLES ======= -->
   </head>
 
