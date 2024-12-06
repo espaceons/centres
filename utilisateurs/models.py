@@ -37,6 +37,7 @@ class CustomUser(AbstractBaseUser):
         (9,'Entreprise'),
         (10,'Dregional'),
         (11,'Visiteur'),
+        (12,'Apprentis'),
         
     )
     email = models.EmailField(max_length=254, unique=True)
@@ -53,7 +54,7 @@ class CustomUser(AbstractBaseUser):
     
 
 
-    
+
     
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['role']
