@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'utilisateurs',
     'param',
     'vitrine',
+    'dashboard',
 ]
 # modification
 AUTH_USER_MODEL = 'utilisateurs.CustomUser'

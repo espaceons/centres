@@ -16,6 +16,9 @@ def logoutView(request):
     logout(request)
     return redirect('vitrine:index')
 
+
+
+
 def loginView(request):
     form = forms.LoginViewForm()
     message=''
@@ -25,7 +28,12 @@ def loginView(request):
             user = authenticate(username=form.cleaned_data['username'], password=form.cleaned_data['password'])
             if user is not None:
                 login(request, user)
-                message = f'bienvenue , {{ user.username }} ! au site du centre'
+                message = f'bienvenue , { user.username } ! au site du centre'
+                context = {
+                    'user':user,
+                    'message': message,
+                }
+                return redirect('dashboard:home')
             else:
                 message = 'Identifiant non valid'
     context ={
@@ -33,6 +41,11 @@ def loginView(request):
         'message':message,
     }
     return render(request, 'utilisateur/login.html', context)
+
+
+
+
+
 
 def RegisterView(request):
     return render(request, 'utilisateur/register.html')
