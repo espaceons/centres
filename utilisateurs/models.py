@@ -51,6 +51,9 @@ class CustomUser(AbstractBaseUser):
     is_active = models.BooleanField(default=False)
     
     
+
+
+    
     
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['role']
