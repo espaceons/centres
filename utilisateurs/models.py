@@ -69,8 +69,8 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 class CustomUser(AbstractUser):
-    CREATEUR = 'CREATEUR'
-    SUBCREATEUR = 'Abonne'
+
+
     ROLE_CHOICES = (
         (1,'Formateur'),
         (2,'Conseiller'),
@@ -85,3 +85,27 @@ class CustomUser(AbstractUser):
         (11,'Visiteur'),
        (12,'Apprentis'),)
     role = models.SmallIntegerField(choices=ROLE_CHOICES,null=True)
+
+    
+    def get_full_name(self):
+        return self.name
+
+    def get_short_name(self):
+        return self.name
+
+    def __str__(self):
+        return self.email
+    
+
+class userProfile(models.Model):
+    user = models.OneToOneField( CustomUser, on_delete=models.CASCADE, related_name="profile")
+    description = models.TextField(blank=True, null=True)
+    location = models.CharField(max_length=30, blank=True)
+    
+    Job_title = models.CharField(max_length=30, blank=True)
+    date_joined = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    
+
+    def __str__(self):
+        return self.user.name

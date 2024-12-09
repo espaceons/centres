@@ -1016,7 +1016,7 @@ $(function() {
     ====================================*/
     var line4_options = {
         series: [{
-            name: "Desktops",
+            name: "Apprentis",
             data: [40, 56, 35, 30, 20, 40, 102, 50, 70, 60, 80, 62]
         }],
         chart: {
@@ -1366,7 +1366,8 @@ $(function() {
               offsetX: 25,
             }
         },
-        labels: ['USA', 'UK', 'Spain', 'France'],
+        /*labels: ['USA', 'UK', 'Spain', 'France'],*/
+        labels: ['TEXTILE ET HABILLEMENT', 'BATIMENT, TRAVAUX PUBLICS ET ANNEXES', 'METIERS DART ET DE LARTISANAT', 'CUIR ET CHAUSSURES'],
         responsive: [{
             breakpoint: 1760,
             options: {
