@@ -15,64 +15,68 @@
        <ul class="nav">
           <li class="nav-category">Main</li>
           <li>
-             <a href="../../index.html">
+             <a href="{% url 'dashboard:home' %}">
                 <i class="icofont-pie-chart"></i>
-                <span class="link-title">Dashboard</span>
+                <span class="link-title">لوحة القيادة</span>
              </a>
           </li>
           <li class="active sub-menu-opened">
              <a href="#">
                 <i class="icofont-shopping-cart"></i>
-                <span class="link-title">Ecommerce</span>
+                <span class="link-title">مركز التكوين</span>
              </a>
 
              <!-- Sub Menu -->
              <ul class="nav sub-menu">
-                <li class="active"><a href="ecommerce.html">Dashboard 1</a></li>
-                <li><a href="ecommerce2.html">dashboard 2</a></li>
-                <li><a href="orders.html">orders</a></li>
-                <li><a href="product-catelog.html">Products Catalog</a></li>
-                <li><a href="product-details.html">Product Details</a></li>
-                <li><a href="cartlist.html">cart list</a></li>
+                <li class="active"><a href="{% url 'dashboard:administrations' %}">الإدارة</a></li>
+                <li class="active"><a href="#">المؤسسات المتعاقدة</a></li>
+                <li class="active"><a href="#">الشراكات</a></li>
+                <li class="active"><a href="#">البرامج</a></li>
+                <!--<li class="active"><a href="ecommerce.html">الإدارة</a></li>-->
+                <!--<li><a href="ecommerce2.html">dashboard 2</a></li>-->
+                <!--<li><a href="orders.html">orders</a></li>-->
+                <!--<li><a href="product-catelog.html">Products Catalog</a></li>-->
+                <!--<li><a href="product-details.html">Product Details</a></li>-->
+                <!--<li><a href="cartlist.html">cart list</a></li>-->
              </ul>
              <!-- End Sub Menu -->
           </li>
-          <li>
+          <!--<li>
              <a href="../../pages/social-media.html">
                 <i class="icofont-chart-histogram"></i>
                 <span class="link-title">Social Media Analytics</span>
              </a>
-          </li>
+          </li>-->
           <li class="nav-category">apps</li>
           <li>
              <a href="#">
                 <i class="icofont-mail-box"></i>
-                <span class="link-title">Email</span>
+                <span class="link-title">المتدربين</span>
              </a>
              <!-- Sub Menu -->
              <ul class="nav sub-menu">
-                <li><a href="../apps/email/inbox.html">Inbox</a></li>
-                <li><a href="../apps/email/read.html">Read</a></li>
+                <li><a href="../apps/email/inbox.html">إضافة</a></li>
+                <li><a href="../apps/email/read.html">هرض</a></li>
                 <li><a href="../apps/email/compose.html">Compose</a></li>
              </ul>
              <!-- End Sub Menu -->
           </li>
-          <li>
+          <!--<li>
              <a href="../apps/chat.html">
                 <i class="icofont-wechat"></i>
                 <span class="link-title">Chat</span>
              </a>
-          </li>
+          </li>-->
           <li>
              <a href="#">
                 <i class="icofont-listing-box"></i>
-                <span class="link-title">To Do List</span>
+                <span class="link-title">المؤسسات</span>
              </a>
 
              <!-- Sub Menu -->
              <ul class="nav sub-menu">
-                <li><a href="../apps/todolist/todolist.html">Tasks</a></li>
-                <li><a href="../apps/todolist/add-new.html">add new</a></li>
+                <li><a href="../apps/todolist/todolist.html">إضافة</a></li>
+                <li><a href="../apps/todolist/add-new.html">عرض</a></li>
                 <li><a href="../apps/todolist/task-details.html">details</a></li>
              </ul>
              <!-- End Sub Menu -->

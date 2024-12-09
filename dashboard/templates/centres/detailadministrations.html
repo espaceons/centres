@@ -1,0 +1,243 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+
+{% include "dashboard/head.html" %}
+
+  <body>
+   <!-- Offcanval Overlay -->
+   <div class="offcanvas-overlay"></div>
+   <!-- Offcanval Overlay -->
+
+   <!-- Wrapper -->
+   <div class="wrapper">
+
+      <!-- Header -->
+      {% include "dashboard/header.html" %}
+      <!-- Main Content -->
+      {% block content %}
+
+            <div class="main-content">
+               <div class="container-fluid">
+                  <!-- Card -->
+                  <div class="card">
+                     <!-- Product Details -->
+                     <div class="product-details pb-0">
+                        <div class="row">
+                           <div class="col-lg-4">
+                              <div class="pd-img-wrapp position-relative mb-5 mb-lg-0">
+
+                                 <img id="img_01" src="{% static 'dashboard/assets/img/product/product-details.jpg' %}" data-zoom-image="{% static 'dashboard/assets/img/product/product-details-large.jpg' %}" alt=""/>
+
+                                 <div id="gal1">
+                                    <a href="#" data-image="{% static 'dashboard/assets/img/product/product-details.jpg' %}" data-zoom-image="{% static 'dashboard/assets/img/product/product-details-large.jpg' %}">
+                                       <img id="img_02" src="{% static 'dashboard/assets/img/product/product-details.jpg' %}" alt="" />
+                                    </a>
+
+                                    <a href="#" data-image="{% static 'dashboard/assets/img/product/product-details-2.jpg' %}" data-zoom-image="{% static 'dashboard/assets/img/product/product-details-2-large.jpg' %}">
+                                       <img id="img_03" src="{% static 'dashboard/assets/img/product/product-details-2.jpg' %}" alt="" />
+                                    </a>
+
+                                    <a href="#" data-image="{% static 'dashboard/assets/img/product/product-details-3.jpg' %}" data-zoom-image="{% static 'dashboard/assets/img/product/product-details-3-large.jpg' %}">
+                                       <img id="img_04" src="{% static 'dashboard/assets/img/product/product-details-3.jpg' %}" alt="" />
+                                    </a>
+                                 </div>
+
+                              </div>
+                           </div>
+                           
+                           <div class="col-lg-8">
+                              <!-- Product Details Content -->
+                              <div class="product-details-content position-relative">
+                                 <!-- Product Title -->
+                                 <h4 class="product_title">Lily Rattan Arm Chair with Metal Legs</h4>
+                                 <!-- End Product Title -->
+
+                                 <!-- Product Price -->
+                                 <p class="price">
+                                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">الخطة :</span>Titre de Poste</span>
+                                 </p>
+                                 <!-- End Product Price -->
+
+                                 <!-- Color Group -->
+                                 <div class="color-group d-flex align-items-center">
+                                    <span class="list-heading bold">Color</span>
+                                    <ul class="mb-0 list-inline">
+                                          <li><a href="#" class="color color1"><span></span></a></li>
+                                          <li><a href="#" class="color color2"><span></span></a></li>
+                                          <li><a href="#" class="color color3 active"><span></span></a></li>
+                                          <li><a href="#" class="color color4"><span></span></a></li>
+                                    </ul>
+                                 </div>
+                                 <!-- End Color Group -->
+               
+                                 <!-- Product Review -->
+                                 <div class="product-review d-flex align-items-center">
+                                    <span class="list-heading bold">Rating</span>
+                                    <!-- Rating -->
+                                    <div class="star-rating">
+                                       <a href="#"><img src="{% static 'dashboard/assets/img/svg/star.svg' %}" alt="" class="svg"></a>
+                                       <a href="#"><img src="{% static 'dashboard/assets/img/svg/star.svg' %}" alt="" class="svg"></a>
+                                       <a href="#"><img src="{% static 'dashboard/assets/img/svg/star.svg' %}" alt="" class="svg"></a>
+                                       <a href="#"><img src="{% static 'dashboard/assets/img/svg/star2.svg' %}" alt="" class="svg"></a>
+                                       <a href="#"><img src="{% static 'dashboard/assets/img/svg/star2.svg' %}" alt="" class="svg"></a>
+                                    </div>
+                                    <!-- End Product Rating -->
+                                 </div>
+                                 <!-- End Product Review -->
+                  
+                                 <!-- Add to Cart Button -->
+                                 <button type="submit" class="single_add_to_cart_button button btn btn-fill">Add To Cart</button>
+                                 <!-- End Add to Cart Button -->
+
+                                 <!-- Product Description -->
+                                 <div class="woocommerce-product-details__short-description">
+                                    <h5>التعريف :</h5>
+                                    <p>Mauris imperdiet orci dapibus, commodo libero nec, interdum tortor. Morbi in nibh faucibus, iaculis lorem vitae, cursus velit. Etiam non blandit ex. Mauris in fringilla velit. Fusce eu dictum neque. Maecenas tristique sem neque, vel congue libero efficitur at. Cras molestie ipsum at sem sollicitudin consectetur. type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                    <p>Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
+                                 </div>
+                                 <!-- End Product Description -->
+                              </div>
+                              <!-- End Product Details Content -->
+                           </div>
+                        </div>
+
+                  
+
+
+                        <!-- Product Grid -->
+                        <div class="product-grid pt-5">
+                           <div class="row">
+                              <div class="col-12">
+                                 <h4 class="font-20 mb-4">Related Products</h4>
+                              </div>
+                              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                 <!-- Product Grid Item -->
+                                 <div class="product-grid-item mb-30">
+                                       <div class="product-img mb-3">
+                                          <a href="{% url 'dashboard:detailadmin' %}">
+                                             <img src="{% static 'dashboard/assets/img/product/pg1.png' %}" class="w-100" alt="">
+                                          </a>
+                                       </div>
+                                       <div class="product-content">
+                                          <h6 class="mb-10">$24</h6>
+                                          <a href="{% url 'dashboard:detailadmin' %}">
+                                             <p class="black">3pc Outdoor Set - Grey/Grey</p>
+                                          </a>
+                                       </div>
+                                 </div>
+                                 <!-- End Product Grid Item -->
+                              </div>
+                              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                 <!-- Product Grid Item -->
+                                 <div class="product-grid-item mb-30">
+                                    <div class="product-img mb-3">
+                                       <a href="product-details.html">
+                                          <img src="{% static 'dashboard/assets/img/product/pg2.png' %}" class="w-100" alt="">
+                                       </a>
+                                    </div>
+                                    <div class="product-content">
+                                       <h6 class="mb-10">$24</h6>
+                                       <a href="product-details.html">
+                                          <p class="black">Left Arm Patio Loveseat</p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <!-- End Product Grid Item -->
+                              </div>
+                              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                 <!-- Product Grid Item -->
+                                 <div class="product-grid-item mb-30">
+                                    <div class="product-img mb-3">
+                                    <a href="product-details.html">
+                                       <img src="{% static 'dashboard/assets/img/product/pg3.png' %}" class="w-100" alt="">
+                                    </a>
+                                    </div>
+                                    <div class="product-content">
+                                       <h6 class="mb-10">$24</h6>
+                                       <a href="product-details.html">
+                                          <p class="black">Felton Tufted Sofa - Gray</p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <!-- End Product Grid Item -->
+                              </div>
+                              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                 <!-- Product Grid Item -->
+                                 <div class="product-grid-item mb-30">
+                                    <div class="product-img mb-3">
+                                    <a href="product-details.html">
+                                       <img src="{% static 'dashboard/assets/img/product/pg4.png' %}" class="w-100" alt="">
+                                    </a>
+                                    </div>
+                                    <div class="product-content">
+                                       <h6 class="mb-10">$24</h6>
+                                       <a href="product-details.html">
+                                          <p class="black">Trellis Elevated Fretwork </p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <!-- End Product Grid Item -->
+                              </div>
+                              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                 <!-- Product Grid Item -->
+                                 <div class="product-grid-item mb-30">
+                                    <div class="product-img mb-3">
+                                       <a href="product-details.html">
+                                          <img src="{% static 'dashboard/assets/img/product/pg5.png' %}" class="w-100" alt="">
+                                       </a>
+                                    </div>
+                                    <div class="product-content">
+                                       <h6 class="mb-10">$24</h6>
+                                       <a href="product-details.html">
+                                          <p class="black">Valencia Area Rug</p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <!-- End Product Grid Item -->
+                              </div>
+                              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                 <!-- Product Grid Item -->
+                                 <div class="product-grid-item mb-30">
+                                    <div class="product-img mb-3">
+                                    <a href="product-details.html">
+                                       <img src="{% static 'dashboard/assets/img/product/pg6.png' %}" class="w-100" alt="">
+                                    </a>
+                                    </div>
+                                    <div class="product-content">
+                                       <h6 class="mb-10">$24</h6>
+                                       <a href="product-details.html">
+                                          <p class="black">Sullivan Swivel Glider Chair</p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <!-- End Product Grid Item -->
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End Product Grid -->
+                     </div>
+                     <!-- End Product Details -->
+                  </div>
+                  <!-- End Card -->
+               </div>
+            </div>
+            <!-- End Main Content -->
+      {% endblock content %}
+
+      </div>
+      <!-- End Main Wrapper -->
+
+      <!-- Footer -->
+      {% include "dashboard/footer.html" %}
+      <!-- End Footer -->
+   </div>
+   <!-- End wrapper -->
+
+   <!--Scripts-->
+   {% include "dashboard/scripts.html" %}
+   <!--Scripts-->
+</body>
+
+</html>
+  </body>
+</html>
