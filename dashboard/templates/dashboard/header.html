@@ -16,7 +16,7 @@
                 <div class="main-header-left h-100 d-flex align-items-center">
                    <!-- Main Header User -->
 
-                   {% if user.is_authenticated %}
+                   
                    <div class="main-header-user">
                       <a href="#" class="d-flex align-items-center" data-toggle="dropdown">
                          <div class="menu-icon">
@@ -24,7 +24,6 @@
                             <span></span>
                             <span></span>
                          </div>
-
                          <div class="user-profile d-xl-flex align-items-center d-none">
                             <!-- User Avatar -->
                             <div class="user-avatar">
@@ -44,10 +43,10 @@
                          <a href="#">My Profile</a>
                          <a href="#">task</a>
                          <a href="#">Settings</a>
-                         <a href="#">Log Out</a>
+                         <a href="{% url 'utilisateurs:logout' %}">LogOut</a>
                       </div>
                    </div>
-                   {% endif %}
+                   
                    <!-- End Main Header User -->
 
                    <!-- Main Header Menu -->

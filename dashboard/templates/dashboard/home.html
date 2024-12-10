@@ -1,47 +1,8 @@
 {% extends "dashboard/base.html" %}
-{% load static %}
 
 
-<html lang="fr">
-{% include "dashboard/head.html" %}
-
-  <body>
-   <!-- Offcanval Overlay -->
-   <div class="offcanvas-overlay"></div>
-   <!-- Offcanval Overlay -->
-
-   <!-- Wrapper -->
-   <div class="wrapper">
-
-      <!-- Header -->
-      {% include "dashboard/header.html" %}
-      <!-- End Header -->
-
-      <!-- Main Wrapper -->
-      <div class="main-wrapper">
-         <!-- Sidebar -->
-            {% include "dashboard/sidebar.html" %}
-         <!-- End Sidebar -->
-         {% block content %}
-                     <!-- Main Content -->
-                     {% include "dashboard/maincontent.html" %}
-                     <!-- End Main Content -->
-         {% endblock content %}
-
-      </div>
-      <!-- End Main Wrapper -->
-
-      <!-- Footer -->
-      {% include "dashboard/footer.html" %}
-      <!-- End Footer -->
-   </div>
-   <!-- End wrapper -->
-
-   <!--Scripts-->
-   {% include "dashboard/scripts.html" %}
-   <!--Scripts-->
-</body>
-
-</html>
-  </body>
-</html>
+{% block content %}
+   <!-- maincontent -->
+   {% include "dashboard/maincontent.html" %}
+   <!-- End maincontent -->
+{% endblock content %}

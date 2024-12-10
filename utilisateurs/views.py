@@ -16,9 +16,6 @@ def logoutView(request):
     logout(request)
     return redirect('vitrine:index')
 
-
-
-
 def loginView(request):
     form = forms.LoginViewForm()
     message=''
@@ -43,9 +40,19 @@ def loginView(request):
     return render(request, 'utilisateur/login.html', context)
 
 
-
-
-
-
 def RegisterView(request):
-    return render(request, 'utilisateur/register.html')
+
+    context = {
+        
+    }
+    if request.method == "POST":
+        name = request.POST.get('username')
+        email = request.POST.get('email')
+
+        password = request.POST.get('pword')
+        
+    return render(request, 'utilisateur/register.html', context)
+
+
+def Home(request):
+    return render(request, 'vitrine/index.html')
