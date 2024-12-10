@@ -68,23 +68,18 @@
 
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+
+from param.models import Centre, Role
+
+
+
 class CustomUser(AbstractUser):
-
-
-    ROLE_CHOICES = (
-        (1,'Formateur'),
-        (2,'Conseiller'),
-        (3,'Directeur'),
-        (4,'Coordinateur'),
-        (5,'RS'),
-        (6,'RAF'),
-        (7,'FC'),
-        (8,'TPRO'),
-        (9,'Entreprise'),
-        (10,'Dregional'),
-        (11,'Visiteur'),
-       (12,'Apprentis'),)
-    role = models.SmallIntegerField(choices=ROLE_CHOICES,null=True)
+    
+    email = models.EmailField(unique=True)    
+    name = models.CharField(max_length=255, null=True, blank=True)
+    centre = models.ForeignKey(Centre, on_delete=models.CASCADE, related_name="role", null=True)
+    role = models.ForeignKey(Role, on_delete=models.CASCADE, related_name="role", null=True)
+    description = models.TextField(null=True, blank=True)
 
     
     def get_full_name(self):
@@ -101,11 +96,10 @@ class userProfile(models.Model):
     user = models.OneToOneField( CustomUser, on_delete=models.CASCADE, related_name="profile")
     description = models.TextField(blank=True, null=True)
     location = models.CharField(max_length=30, blank=True)
-    
     Job_title = models.CharField(max_length=30, blank=True)
     date_joined = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     
 
     def __str__(self):
-        return self.user.name
+        return self.user.email

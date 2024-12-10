@@ -2,8 +2,8 @@
 <header class="header white-bg fixed-top d-flex align-content-center flex-wrap">
     <!-- Logo -->
     <div class="logo">
-       <a href="../../index.html" class="default-logo"><img src="{% static 'dashboard/assets/img/logo.png' %}" alt=""></a>
-       <a href="../../index.html" class="mobile-logo"><img src="{% static 'dashboard/assets/img/mobile-logo.png' %}" alt=""></a>
+       <a href="{% url 'dashboard:home' %}" class="default-logo"><img src="{% static 'dashboard/assets/img/logo.png' %}" alt=""></a>
+       <a href="{% url 'dashboard:home' %}" class="mobile-logo"><img src="{% static 'dashboard/assets/img/mobile-logo.png' %}" alt=""></a>
     </div>
     <!-- End Logo -->
 

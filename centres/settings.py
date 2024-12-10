@@ -57,10 +57,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'centres.urls'
-# modification
 
+
+# modification
 LOGIN_URL = '/login/'
-LOGIN_REDIRECT_URL = '/secure'
 
 TEMPLATES = [
     {
@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'centres.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db1.sqlite3',
     }
 }
 

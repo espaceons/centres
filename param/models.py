@@ -13,3 +13,10 @@ class Centre(models.Model):
 
     def __str__(self):
         return self.nom
+    
+class Role(models.Model):
+    libelle = models.CharField(max_length=250, null=True, blank=True)
+    description = models.TextField(blank=True)
+    
+    def __str__(self):
+        return self.libelle
