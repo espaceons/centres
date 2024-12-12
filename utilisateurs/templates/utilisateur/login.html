@@ -15,7 +15,7 @@
       </div> 
     <div class="custom-breadcrumns border-bottom">
       <div class="container">
-        <a href="index.html">Home</a>
+        <a href="{% url 'vitrine:index' %}">Home</a>
         <span class="mx-3 icon-keyboard_arrow_right"></span>
         <span class="current">Login</span>
       </div>
@@ -24,31 +24,30 @@
       {% csrf_token %}
       <div class="site-section">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-5">
-                    <div class="row">
-                        <div class="col-md-12 form-group">
-                            <label for="username">Username</label>
-                            <!--<input type="text" id="username" class="form-control form-control-lg">-->
-                            {{ form.username }}
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <label for="pword">Password</label>
-                            <!--<input type="text" id="pword" class="form-control form-control-lg">-->
-                            {{ form.password }}
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <input type="submit" value="Se connecter" class="btn btn-primary btn-lg px-5">
-                            <p>{{ message }}</p>
-                        </div>
-                    </div>
+          <div class="row justify-content-center">
+            <div class="col-md-5">
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <label for="username">Username</label>
+                  <!--<input type="text" id="username" class="form-control form-control-lg">-->
+                  {{ form.username }}
                 </div>
+                <div class="col-md-12 form-group">
+                  <label for="password">Password</label>
+                  <!--<input type="text" id="pword" class="form-control form-control-lg">-->
+                  {{ form.password }}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <input type="submit" value="Se connecter" class="btn btn-primary btn-lg px-5">
+                  <p>{{ message }}</p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
       </div>
-    </div>
   </form>
   <!-- .site-wrap -->
 
@@ -57,5 +56,4 @@
       <!--footer-->
       {% include "vitrine/footer.html" %}
     <!--footer-->
-  
 {% endblock %}  

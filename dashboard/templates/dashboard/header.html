@@ -15,8 +15,6 @@
                 <!-- Header Left -->
                 <div class="main-header-left h-100 d-flex align-items-center">
                    <!-- Main Header User -->
-
-                   
                    <div class="main-header-user">
                       <a href="#" class="d-flex align-items-center" data-toggle="dropdown">
                          <div class="menu-icon">
@@ -33,8 +31,10 @@
 
                             <!-- User Info -->
                             <div class="user-info">
+                              <!--Afficher utilisateur et email courant-->
                                <h4 class="user-name">{{ user.username }}</h4>
                                <p class="user-email">{{ user.email }}</p>
+                               <!--Afficher utilisateur et email courant-->
                             </div>
                             <!-- End User Info -->
                          </div>
@@ -43,7 +43,9 @@
                          <a href="#">My Profile</a>
                          <a href="#">task</a>
                          <a href="#">Settings</a>
+                         <!--fonction logout-->
                          <a href="{% url 'utilisateurs:logout' %}">LogOut</a>
+                         <!--fonction logout-->
                       </div>
                    </div>
                    

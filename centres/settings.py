@@ -60,7 +60,7 @@ ROOT_URLCONF = 'centres.urls'
 
 
 # modification
-LOGIN_URL = '/login/'
+LOGIN_URL = '/accounts/login/'
 
 TEMPLATES = [
     {
