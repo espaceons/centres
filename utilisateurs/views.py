@@ -11,8 +11,9 @@ import datetime
 from django.core.exceptions import ValidationError
 from django.urls import reverse
 from utilisateurs.models import *
+from utilisateurs.forms import RegisterViewForm
 from django.contrib.auth import authenticate, login, logout
-from utilisateurs.forms import CustomUserCreationForm
+
 
 # logout
 
@@ -52,16 +53,20 @@ def loginView(request):
 
 def RegisterView(request):
     if request.method == 'POST':
-        form = CustomUserCreationForm(request.POST)
+        form = RegisterViewForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            login(request,user)
+            new_user = form.save(commit=False)
+            new_user.set_password(form.cleaned_data['password'])
+            new_user.save()
+            context = {
+            'new_user':new_user,
+        }
+            return render(request, 'utilisateur/login.html', context)
     else:
-        form = CustomUserCreationForm()
+        form = RegisterViewForm()
     context = {
-        'form': CustomUserCreationForm,
+        'form':form,
     }
-    
     return render(request, 'utilisateur/register.html', context)
 
 
