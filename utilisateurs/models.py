@@ -1,4 +1,5 @@
 
+from django.conf import settings
 from django.utils import timezone
 from param.models import Centre, Role
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
@@ -27,6 +28,8 @@ class CustomUser(AbstractBaseUser):
     username = models.CharField(max_length=30, blank=True)
     first_name = models.CharField(max_length=30, blank=True)
     last_name = models.CharField(max_length=30, blank=True)
+    centre = models.ForeignKey(Centre, on_delete=models.CASCADE, null=True, blank=True)
+    role = models.ForeignKey(Role, on_delete=models.CASCADE, null=True, blank=True)
     phone = models.CharField(max_length=12, null=True, blank=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
@@ -52,8 +55,9 @@ class CustomUser(AbstractBaseUser):
     
     
 
-class userProfile(models.Model):
-    user = models.OneToOneField( CustomUser, on_delete=models.CASCADE, related_name="profile")
+class CustomUserProfile(models.Model):
+    user = models.OneToOneField( settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="profile")
+    username = models.CharField(max_length=30, blank=True, unique=True)
     
     centre = models.ForeignKey(Centre, on_delete=models.CASCADE, null=True, blank=True)
     role = models.ForeignKey(Role, on_delete=models.CASCADE, null=True, blank=True)

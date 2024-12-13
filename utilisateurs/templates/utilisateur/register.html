@@ -62,37 +62,35 @@
             <div class="row justify-content-center">
                 <div class="col-md-5">
                     <div class="row">
-
-                        {{ form.as_div }}
-
-
-                        <!--<div class="col-md-12 form-group">
-                            <label for="username">Username</label>
+                        <div class="col-md-12 form-group">
+                            <label for="first_name">username</label>
                             {{ form.username }}
+                        </div>
+
+
+                       <div class="col-md-12 form-group">
+                            <label for="first_name">first_name</label>
+                            {{ form.first_name }}
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <label for="last_name">last_name</label>
+                            {{ form.last_name }}
                         </div>
                         <div class="col-md-12 form-group">
                             <label for="email">Email</label>
                             {{ form.email }}
                         </div>
 
-                        
+                         
                  
                         <div class="col-md-12 form-group">
                             <label for="centre">Centre</label>
-                            <select name="centre" id="centre">
-                                {% for c in form.centre %}
-                                    <option value="{{ c.id }}">{{ c.nom }}</option>
-                                {% endfor %}
-                            </select>
+                            {{ form.centre }}
                         </div>
                         
                         <div class="col-md-12 form-group">
                             <label for="role">Rôle</label>
-                            <select name="role" id="role">
-                                {% for r in form.role %}
-                                    <option value="{{ r.id }}">{{ r.nom }}</option>
-                                {% endfor %}
-                            </select>
+                            {{ form.role }}
                         </div>
                         
                        
@@ -105,7 +103,7 @@
                             <label for="password2">Re-type Password</label>
                             {{ form.password2 }}
                         </div>
-                    </div>-->
+                    </div>
                     <div class="row">
                         <div class="col-12">
                             <input type="submit" value="Register" class="btn btn-primary btn-lg px-5">

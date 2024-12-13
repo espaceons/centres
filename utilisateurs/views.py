@@ -11,7 +11,7 @@ import datetime
 from django.core.exceptions import ValidationError
 from django.urls import reverse
 from utilisateurs.models import *
-from utilisateurs.forms import RegisterViewForm
+from utilisateurs.forms import RegisterViewForm, userUpdateForm
 from django.contrib.auth import authenticate, login, logout
 
 
@@ -75,3 +75,23 @@ def RegisterView(request):
 
 def Home(request):
     return render(request, 'vitrine/index.html')
+
+
+def CustomUserProfileViews(request, username):
+    if request.method == 'POST':
+        user = request.user
+        form = userUpdateForm(request.POST,request.FILES,instance=user)
+        if form.is_valid():
+            user_form = form.save()
+            messages.success(request,f'{user_form.username}, votre profile est mis a jour !')
+            return redirect("profile", user_form.username)
+        
+    user = CustomUser.objects.filter(usrname=username).first()
+    if user:
+        form = userUpdateForm(isinstance=user)
+        context = {
+            'form':form,
+            }
+        return render( request, 'utilisateurs:CustomUserProfileViews', context)
+    return redirect('dashboard/home.html')
+        
