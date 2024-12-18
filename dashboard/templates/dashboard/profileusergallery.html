@@ -1,0 +1,433 @@
+{% extends 'dashboard/profile.html' %}
+{% load static %}
+{% block profilecontent %}
+<div class="row">
+    <div class="col-lg-4 col-md-5">
+        <!-- Today's Event -->
+        <div class="todays-evnet">
+            <div class="bg-c2-light profile-widget-header">
+                <h4 class="d-flex align-items-center">
+                    <img src="{% static 'dashboard/assets/img/svg/calender-color.svg' %}" alt="" class="svg ml-3">
+                    Today's Events
+                </h4>
+            </div>
+            <div class="card">
+                <ul class="list-unstyled">
+                    <li class="border-bottom">
+                        <h5>Ligula rhoncus euismod pretium</h5>
+                        <div class="event-meta font-14 d-flex align-items-center">
+                            <img src="{% static 'dashboard/assets/img/svg/watch2.svg' %}" alt="" class="svg">
+                            <span class="time d-inline-block mr-2">7.20pm</span>
+                            <span class="date d-inline-block mr-2">12 October 2019</span>
+                        </div>
+                        <p class="mt-2">Duis porta, ligula rhoncus euismod pretium, nisi tellus eleifend odio, luctus viverra sem dolor id sem. Maecenas a venenatis enim, quis porttitor magna.</p>
+                    </li>
+                    <li class="border-bottom">
+                        <h5>Phasellus finibus enim nulla, quis ornare odio facilisiseu</h5>
+                        <div class="event-meta font-14 d-flex align-items-center">
+                            <img src="{% static 'dashboard/assets/img/svg/watch2.svg' %}" alt="" class="svg">
+                            <span class="time d-inline-block mr-2">7.20pm</span>
+                            <span class="date d-inline-block mr-2">12 October 2019</span>
+                        </div>
+                    </li>
+                    <li class="border-bottom">
+                        <h5>Aenean sed nibh a magna posuere tempor.</h5>
+                        <div class="event-meta font-14 d-flex align-items-center">
+                            <img src="{% static 'dashboard/assets/img/svg/watch2.svg' %}" alt="" class="svg">
+                            <span class="time d-inline-block mr-2">7.20pm</span>
+                            <span class="date d-inline-block mr-2">12 October 2019</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h5>Aenean sed lorem ested quis neque ut nibh suscipit imperdiet</h5>
+                        <div class="event-meta font-14 d-flex align-items-center">
+                            <img src="{% static 'dashboard/assets/img/svg/watch2.svg' %}" alt="" class="svg">
+                            <span class="time d-inline-block mr-2">7.20pm</span>
+                            <span class="date d-inline-block mr-2">12 October 2019</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Today's Event -->
+
+        <!-- News -->
+        <div class="news mt-30">
+            <div class="bg-c2-light profile-widget-header">
+                <h5 class="d-flex align-items-center">
+                    <img src="{% static 'dashboard/assets/img/svg/notification-icon.svg' %}" alt="" class="svg ml-3">
+                    News
+                </h5>
+            </div>
+            <div class="card news-card">
+
+                <!-- Item Single -->
+                <a href="#" class="item-single border-bottom d-flex align-items-center">
+                    <div class="content">
+                        <p class="mb-1">Good to get ahead of the problem and use "Code Splitting"</p>
+                        <span class="source font-14 bold c4">Daily Star</span>
+                    </div>
+                </a>
+                <!-- End Item Single -->
+
+                <!-- Item Single -->
+                <a href="#" class="item-single border-bottom d-flex align-items-center">
+                    <div class="content">
+                        <p class="mb-1">Advantages boisterous day excellence boy. Out between our two waiting wishing</p>
+                        <span class="source font-14 bold c4">Dashmin</span>
+                    </div>
+                </a>
+                <!-- End Item Single -->
+
+                <!-- Item Single -->
+                <a href="#" class="item-single border-bottom d-flex align-items-center">
+                    <div class="content">
+                        <p class="mb-1">Advantages boisterous day excellence boy. Out between our two waiting wishing</p>
+                        <span class="source font-14 bold c4">Dashmin</span>
+                    </div>
+                </a>
+                <!-- End Item Single -->
+
+                <!-- Item Single -->
+                <a href="#" class="item-single border-bottom d-flex align-items-center">
+                    <div class="content">
+                        <p class="mb-1">Advantages boisterous day excellence boy. Out between our two waiting wishing</p>
+                        <span class="source font-14 bold c4">Dashmin</span>
+                    </div>
+                </a>
+                <!-- End Item Single -->
+
+                <!-- Item Single -->
+                <a href="#" class="item-single d-flex align-items-center">
+                    <div class="content">
+                        <p class="mb-1">Advantages boisterous day excellence boy. Out between our two waiting wishing</p>
+                        <span class="source font-14 bold c4">Dashmin</span>
+                    </div>
+                </a>
+                <!-- End Item Single -->
+            </div>
+            <!-- End Notifications -->
+        </div>
+        <!-- End News -->
+
+        <!-- Info -->
+        <div class="info mt-30">
+            <div class="bg-c2-light profile-widget-header">
+                <h5 class="d-flex align-items-center">
+                    <img src="{% static 'dashboard/assets/img/svg/info3.svg' %}" alt="" class="svg ml-3">
+                    Info
+                </h5>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                   <ul class="p_info-list list-unstyled">
+                      <li>UX Designer at <a href="https://www.google.com">google</a></li>
+                      <li>Former UI Designer at <a href="#">CBI</a></li>
+                      <li>Studied <a href="#">IT science</a> at <a href="#">Torronto</a></li>
+                      <li>Studied at <a href="E">College of new Jersey</a></li>
+                      <li>Followed by <a href="#">338 people</a></li>
+                   </ul>
+                </div>
+            </div>
+            <!-- End Notifications -->
+        </div>
+        <!-- End Info -->
+
+        <!-- Card -->
+        <div class="card mt-30">
+            <div class="bg-c2-light profile-widget-header">
+                <h5 class="d-flex align-items-center">
+                    <img src="{% static 'dashboard/assets/img/svg/info3.svg' %}" alt="" class="svg ml-3">
+                    Top Followers
+                </h5>
+            </div>
+
+            <!-- Table -->
+            <table class="style--five">
+                <thead>
+                    <tr>
+                        <th>Profile</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                         <div class="d-flex align-items-center">
+                               <div class="img">
+                                  <img src="{% static 'dashboard/assets/img/avatar/f1.png' %}" alt="">
+                               </div>
+                               <div class="name">Kary Threlkeld</div>
+                         </div>
+                        </td>
+                        <td><a href="#" class="follow-btn">Follow <i class="icofont-arrow-right"></i></a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                        <div class="d-flex align-items-center">
+                            <div class="img">
+                                <img src="{% static 'dashboard/assets/img/avatar/f2.png' %}" alt="">
+                            </div>
+                            <div class="name">Kizzy Savoy</div>
+                        </div>
+                        </td>
+                        <td><a href="#" class="follow-btn">Follow <i class="icofont-arrow-right"></i></a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                        <div class="d-flex align-items-center">
+                            <div class="img">
+                                <img src="{% static 'dashboard/assets/img/avatar/f3.png' %}" alt="">
+                            </div>
+                            <div class="name">Tonette Baumgarten</div>
+                        </div>
+                        </td>
+                        <td><a href="#" class="follow-btn">Follow <i class="icofont-arrow-right"></i></a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                        <div class="d-flex align-items-center">
+                            <div class="img">
+                                <img src="{% static 'dashboard/assets/img/avatar/f4.png' %}" alt="">
+                            </div>
+                            <div class="name">Luella Brumit</div>
+                        </div>
+                        </td>
+                        <td><a href="#" class="follow-btn">Follow <i class="icofont-arrow-right"></i></a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="img">
+                                    <img src="{% static 'dashboard/assets/img/avatar/f5.png' %}" alt="">
+                                </div>
+                                <div class="name">Dionne Rosser</div>
+                            </div>
+                        </td>
+                        <td><a href="#" class="follow-btn">Follow <i class="icofont-arrow-right"></i></a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="img">
+                                    <img src="{% static 'dashboard/assets/img/avatar/f6.png' %}" alt="">
+                                </div>
+                                <div class="name">Earl Penton</div>
+                            </div>
+                        </td>
+                        <td><a href="#" class="follow-btn">Follow <i class="icofont-arrow-right"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- End Table -->
+        </div>
+        <!-- End Card -->
+        <div class="card mt-30">
+          <div class="bg-c2-light profile-widget-header">
+             <h5 class="d-flex align-items-center">
+                <img src="{% static 'dashboard/assets/img/svg/gallery2.svg' %}" alt="" class="svg ml-3">
+                Gallery
+             </h5>
+          </div>
+             <div class="wedget-gallery pb-1 pl-1 pr-2 pt-2">
+                <div class="row ml-0 mr-0">
+                   <div class="col-md-4 col-6 pl-1 pr-0 pb-1">
+                      <img src="{% static 'dashboard/assets/img/media/p1.png' %}" class="img-fluid" alt="gallery avtar img">
+                   </div>
+                   <div class="col-md-4 col-6 pl-1 pr-0 pb-1">
+                      <img src="{% static 'dashboard/assets/img/media/p2.png' %}" class="img-fluid" alt="gallery avtar img">
+                   </div>
+                   <div class="col-md-4 col-6 pl-1 pr-0 pb-1">
+                      <img src="{% static 'dashboard/assets/img/media/p3.png' %}" class="img-fluid" alt="gallery avtar img">
+                   </div>
+                   <div class="col-md-4 col-6 pl-1 pr-0 pb-1">
+                      <img src="{% static 'dashboard/assets/img/media/p4.png' %}" class="img-fluid" alt="gallery avtar img">
+                   </div>
+                   <div class="col-md-4 col-6 pl-1 pr-0 pb-1">
+                      <img src="{% static 'dashboard/assets/img/media/p5.png' %}" class="img-fluid" alt="gallery avtar img">
+                   </div>
+                   <div class="col-md-4 col-6 pl-1 pr-0 pb-1">
+                      <img src="{% static 'dashboard/assets/img/media/p6.png' %}" class="img-fluid" alt="gallery avtar img">
+                   </div>
+                   <div class="col-md-4 col-6 pl-1 pr-0 pb-1">
+                      <img src="{% static 'dashboard/assets/img/media/p7.png' %}" class="img-fluid" alt="gallery avtar img">
+                   </div>
+                   <div class="col-md-4 col-6 pl-1 pr-0 pb-1">
+                      <img src="{% static 'dashboard/assets/img/media/p8.png' %}" class="img-fluid" alt="gallery avtar img">
+                   </div>
+                   <div class="col-md-4 col-6 pl-1 pr-0 pb-1">
+                      <img src="{% static 'dashboard/assets/img/media/p9.png' %}" class="img-fluid" alt="gallery avtar img">
+                   </div>
+                </div>
+          </div>
+       </div>
+    </div>
+    <div class="col-lg-8 col-md-7">
+        <!-- Card -->
+        <div class="card mt-30 mt-md-0">
+            <div class="card-body">
+
+                <!-- Gallery -->
+                <div class="profile-gallery">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-flex align-items-center justify-content-between pt-2 mb-20">
+                                <h4>16 October 2019</h4>
+                                <span class="font-14 bold c4">15 Items</span>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <!-- Profile gallery IMG -->
+                            <div class="p_gallery-img mb-30">
+                                    <img src="{% static 'dashboard/assets/img/media/p1.png' %}" class="w-100" alt="">
+                            </div>
+                            <!-- End Profile gallery IMG -->
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <!-- Profile gallery IMG -->
+                            <div class="p_gallery-img mb-30">
+                                    <img src="{% static 'dashboard/assets/img/media/p2.png' %}" class="w-100" alt="">
+                            </div>
+                            <!-- End Profile gallery IMG -->
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <!-- Profile gallery IMG -->
+                            <div class="p_gallery-img mb-30">
+                                    <img src="{% static 'dashboard/assets/img/media/p3.png' %}" class="w-100" alt="">
+                            </div>
+                            <!-- End Profile gallery IMG -->
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <!-- Profile gallery IMG -->
+                            <div class="p_gallery-img mb-30">
+                                    <img src="{% static 'dashboard/assets/img/media/p4.png' %}" class="w-100" alt="">
+                            </div>
+                            <!-- End Profile gallery IMG -->
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <!-- Profile gallery IMG -->
+                            <div class="p_gallery-img mb-30">
+                                    <img src="{% static 'dashboard/assets/img/media/p5.png' %}" class="w-100" alt="">
+                            </div>
+                            <!-- End Profile gallery IMG -->
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <!-- Profile gallery IMG -->
+                            <div class="p_gallery-img mb-30">
+                                    <img src="{% static 'dashboard/assets/img/media/p6.png' %}" class="w-100" alt="">
+                            </div>
+                            <!-- End Profile gallery IMG -->
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <!-- Profile gallery IMG -->
+                            <div class="p_gallery-img mb-30">
+                                    <img src="{% static 'dashboard/assets/img/media/p7.png' %}" class="w-100" alt="">
+                            </div>
+                            <!-- End Profile gallery IMG -->
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <!-- Profile gallery IMG -->
+                            <div class="p_gallery-img mb-30">
+                                    <img src="{% static 'dashboard/assets/img/media/p8.png' %}" class="w-100" alt="">
+                            </div>
+                            <!-- End Profile gallery IMG -->
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-center justify-content-between pt-2 mb-20">
+                                <h4>15 October 2019</h4>
+                                <span class="font-14 bold c4">15 Items</span>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <!-- Profile gallery IMG -->
+                            <div class="p_gallery-img mb-30">
+                                    <img src="{% static 'dashboard/assets/img/media/p9.png' %}" class="w-100" alt="">
+                            </div>
+                            <!-- End Profile gallery IMG -->
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <!-- Profile gallery IMG -->
+                            <div class="p_gallery-img mb-30">
+                                    <img src="{% static 'dashboard/assets/img/media/p10.png' %}" class="w-100" alt="">
+                            </div>
+                            <!-- End Profile gallery IMG -->
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <!-- Profile gallery IMG -->
+                            <div class="p_gallery-img mb-30">
+                                    <img src="{% static 'dashboard/assets/img/media/p11.png' %}" class="w-100" alt="">
+                            </div>
+                            <!-- End Profile gallery IMG -->
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <!-- Profile gallery IMG -->
+                            <div class="p_gallery-img mb-30">
+                                    <img src="{% static 'dashboard/assets/img/media/p12.png' %}" class="w-100" alt="">
+                            </div>
+                            <!-- End Profile gallery IMG -->
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-center justify-content-between pt-2 mb-20">
+                                <h4>14 October 2019</h4>
+                                <span class="font-14 bold c4">15 Items</span>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <!-- Profile gallery IMG -->
+                            <div class="p_gallery-img mb-30">
+                                    <img src="{% static 'dashboard/assets/img/media/p13.png' %}" class="w-100" alt="">
+                            </div>
+                            <!-- End Profile gallery IMG -->
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <!-- Profile gallery IMG -->
+                            <div class="p_gallery-img mb-30">
+                                    <img src="{% static 'dashboard/assets/img/media/p14.png' %}" class="w-100" alt="">
+                            </div>
+                            <!-- End Profile gallery IMG -->
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <!-- Profile gallery IMG -->
+                            <div class="p_gallery-img mb-30">
+                                    <img src="{% static 'dashboard/assets/img/media/p15.png' %}" class="w-100" alt="">
+                            </div>
+                            <!-- End Profile gallery IMG -->
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <!-- Profile gallery IMG -->
+                            <div class="p_gallery-img mb-30">
+                                    <img src="{% static 'dashboard/assets/img/media/p16.png' %}" class="w-100" alt="">
+                            </div>
+                            <!-- End Profile gallery IMG -->
+                        </div>
+                        
+                        <div class="col-xl-12">
+                            <!-- Pagination -->
+                            <div class="pagination d-flex flex-column align-items-center mb-10">
+                            <ul class="list-inline d-inline-flex align-items-center mb-2">
+                                <li><a href="#">
+                                    <img src="{% static 'dashboard/assets/img/svg/left-angle.svg' %}" alt="" class="svg">
+                                </a></li>
+                                <li class="current"><span class="current">2</span></li>
+                                <li><a href="#">
+                                    <img src="{% static 'dashboard/assets/img/svg/right-angle.svg' %}" alt="" class="svg">
+                                </a></li>
+                            </ul>
+                            <p class="font-12">Showing 20 items of 124</p>
+                            </div>
+                            <!-- End Pagination -->
+                        </div>
+                    </div>
+                </div>
+                <!-- End Gallery -->
+            </div>
+        </div>
+        <!-- End Card -->
+    </div>
+</div>
+{% endblock %}

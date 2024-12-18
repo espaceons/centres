@@ -1,0 +1,71 @@
+{% load static %}
+<!-- User Profile Nav -->
+<div class="user-profile-nav d-flex justify-content-xl-between align-items-xl-center flex-column flex-xl-row">
+    <!-- Profile Info -->
+    <div class="profile-info d-flex align-items-center">
+      <div class="profile-pic ml-3">
+        <img src="{% static 'dashboard/assets/img/media/profile-pic.jpg' %}" alt="" />
+
+        <!-- Upload Photo -->
+        <div class="upload-button">
+          <img src="{% static 'dashboard/assets/img/svg/gallery.svg' %}" alt="" class="svg ml-2" />
+          <span>Upload Photo</span>
+          <input class="file-input" type="file" id="fileUpload2" accept="image/*" />
+        </div>
+        <!-- End Upload Photo -->
+      </div>
+
+      <div>
+        <h3>{{ user }}</h3>
+        <p class="font-14">{{ user.centre }}</p>
+        <p class="font-14">{{ user.role }}</p>
+      </div>
+    </div>
+    <!-- End Profile Info -->
+
+    <div class="d-flex align-items-center mt-3 mt-xl-0">
+     <ul class="nav profile-nav-tabs">
+        <li>
+          <a class="active pr-0 pl-2 pl-xl-30"><span class="chat"><img src="{% static 'dashboard/assets/img/svg/chat-icon.svg' %}" alt="" class="svg" /></span></a>
+        </li>
+        <li>
+          <a class="conncetion" href="{% url 'utilisateurs:relations' %}">
+            <div class="btn-circle ml-20">
+              <img src="{% static 'dashboard/assets/img/svg/user-check.svg' %}" alt="" class="svg" />
+            </div>
+            <div class="font-14">
+              <h4>154</h4>
+              <p class="font-14 text_color">Relations</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="p_nav-link active" href="{% url 'utilisateurs:profile' %}">About</a>
+        </li>
+        <li>
+          <a class="p_nav-link" href="{% url 'utilisateurs:gallery' %}">Gallery</a>
+        </li>
+        <li>
+          <a class="p_nav-link has-before" href="{% url 'utilisateurs:newfeed' %}">News Feed</a>
+        </li>
+     </ul>
+     <div class="px-3">
+        <!-- Dropdown Button -->
+        <div class="dropdown-button">
+          <a href="#" class="d-flex align-items-center" data-toggle="dropdown">
+            <div class="menu-icon style--two w-auto justify-content-center mr-0">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+          <div class="dropdown-menu">
+            <a href="edit-profile.html">Edit Profile</a>
+            <a href="user-dashboard.html">User Dashboard</a>
+          </div>
+        </div>
+        <!-- End Dropdown Button -->
+      </div>
+     </div>
+  </div>
+  <!-- End User Profile Nav -->

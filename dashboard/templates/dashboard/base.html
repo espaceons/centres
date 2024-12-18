@@ -1,42 +1,50 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="fr">
-{% include "dashboard/head.html" %}
+  <head>
+    {% include 'dashboard/head.html' %}
+    <!-- ======= BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
+    <link rel="stylesheet" href="{% static 'dashboard/assets/plugins/apex/apexcharts.css' %}" />
+    <!-- ======= END BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
+  </head>
+
   <body>
-   <!-- Offcanval Overlay -->
-   <div class="offcanvas-overlay"></div>
-   <!-- Offcanval Overlay -->
+    <!-- Offcanval Overlay -->
+    <div class="offcanvas-overlay"></div>
+    <!-- Offcanval Overlay -->
 
-   <!-- Wrapper -->
-   <div class="wrapper">
-
+    <!-- Wrapper -->
+    <div class="wrapper">
       <!-- Header -->
-      {% include "dashboard/header.html" %}
+      {% include 'dashboard/header.html' %}
       <!-- End Header -->
 
       <!-- Main Wrapper -->
       <div class="main-wrapper">
-         <!-- Sidebar -->
-            {% include "dashboard/sidebar.html" %}
-         <!-- End Sidebar -->
+        <!-- Sidebar -->
+        {% include 'dashboard/sidebar.html' %}
+        <!-- End Sidebar -->
 
-         <!-- Main Content -->
-            {% block content %}
-            
-            {% endblock content %}
-         <!-- End Main Content -->
+        <!-- Main Content -->
+        <div class="main-content">
+          {% block content %}
+
+          {% endblock %}
+        </div>
+        <!-- End Main Content -->
       </div>
       <!-- End Main Wrapper -->
 
       <!-- Footer -->
-      {% include "dashboard/footer.html" %}
+      {% include 'dashboard/footer.html' %}
       <!-- End Footer -->
-   </div>
-   <!-- End wrapper -->
+    </div>
+    <!-- End wrapper -->
 
-   <!--Scripts-->
-   {% include "dashboard/scripts.html" %}
-   <!--Scripts-->
-</body>
+    {% include 'dashboard/js.html' %}
+    <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
+    <script src="{% static 'dashboard/assets/plugins/apex/apexcharts.min.js' %}"></script>
+    <script src="{% static 'dashboard/assets/plugins/apex/custom-apexcharts.js' %}"></script>
+    <!-- ======= End BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
+  </body>
 </html>

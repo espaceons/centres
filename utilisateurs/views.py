@@ -1,6 +1,6 @@
 
 from utilisateurs import forms
-from django.shortcuts import render,redirect
+from django.shortcuts import get_object_or_404, render,redirect
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -73,25 +73,41 @@ def RegisterView(request):
 
 
 
+
+
 def Home(request):
     return render(request, 'vitrine/index.html')
 
 
-def CustomUserProfileViews(request, username):
-    if request.method == 'POST':
-        user = request.user
-        form = userUpdateForm(request.POST,request.FILES,instance=user)
-        if form.is_valid():
-            user_form = form.save()
-            messages.success(request,f'{user_form.username}, votre profile est mis a jour !')
-            return redirect("profile", user_form.username)
-        
-    user = CustomUser.objects.filter(usrname=username).first()
-    if user:
-        form = userUpdateForm(isinstance=user)
-        context = {
-            'form':form,
-            }
-        return render( request, 'utilisateurs:CustomUserProfileViews', context)
-    return redirect('dashboard/home.html')
+
+
+@login_required(login_url='/accounts/login/')
+def ProfileView(request):
+    profile = CustomUserProfile.objects.all()
+    context = {
+        'profile':profile,
+    }
+    return render(request,'dashboard/profile.html', context)
+
+
+
+@login_required(login_url='/accounts/login/')
+def profileuserrelations(request):
+    context= {}
+    return render(request,'dashboard/profileuserrelations.html', context)
+
+@login_required(login_url='/accounts/login/')
+def profileusergallery(request):
+    context= {}
+    return render(request,'dashboard/profileusergallery.html', context)
+
+
+
+@login_required(login_url='/accounts/login/')
+def profileusernewfeed(request):
+    context= {}
+    return render(request,'dashboard/profileusernewfeed.html', context)
+
+
+
         
