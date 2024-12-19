@@ -1,0 +1,381 @@
+{% extends 'dashboard/profile.html' %}
+{% load static %}
+{% block profilecontent %}
+  <!-- Form -->
+  <form action="#">
+    <div class="row">
+      <div class="col-xl-6">
+        <!-- Card -->
+        <div class="card">
+          <div class="card-body p-30">
+            <div class="about-myself mb-5">
+              <h4 class="mb-3">About Myself</h4>
+              <textarea class="theme-input-style style--two">Fusce at nisi eget dolor rhoncus facilisis. Mauris ante nisl, consectetur et luctus et, porta ut dolor. Curabitur ultricies ultrices nulla. Morbi blandit nec est vitae dictum. Etiam vel consectetur diam. Maecenas vitae egestas dolor. Fusce tempor magna at tortor aliquet finibus. Sed eu nunc sit amet elit euismod faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</textarea>
+            </div>
+
+            <!-- Edit Personal Info -->
+            <div class="edit-personal-info mb-5">
+              <div class="row">
+                <div class="col-12">
+                  <h4 class="mb-3">Personal Information</h4>
+                </div>
+              </div>
+
+              <!-- Form Group -->
+              <div class="form-group row align-items-center">
+                <div class="col-3">
+                  <label for="edit-fname">First Name</label>
+                </div>
+                <div class="col-9">
+                  <input type="text" id="edit-fname" class="form-control" value="Abrilay" />
+                </div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group row align-items-center">
+                <div class="col-3">
+                  <label for="edit-lname">Last Name</label>
+                </div>
+                <div class="col-9">
+                  <input type="text" id="edit-lname" class="form-control" value="Khatun" />
+                </div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group row align-items-center">
+                <div class="col-3">
+                  <label for="edit-age">Age</label>
+                </div>
+                <div class="col-9">
+                  <input type="text" id="edit-age" class="form-control" value="26" />
+                </div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group row align-items-center">
+                <div class="col-3">
+                  <label for="edit-position">Position</label>
+                </div>
+                <div class="col-9">
+                  <input type="text" id="edit-position" class="form-control" value="Front End Developer" />
+                </div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group row align-items-center">
+                <div class="col-3">
+                  <label for="edit-address">Address</label>
+                </div>
+                <div class="col-9">
+                  <input type="text" id="edit-address" class="form-control" value="228 Park Ave Str. New York, USA" />
+                </div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group row align-items-center">
+                <div class="col-3">
+                  <label for="edit-phone">Phone</label>
+                </div>
+                <div class="col-9">
+                  <input type="text" id="edit-phone" class="form-control" value="00 2136 4545" />
+                  <span class="font-12 c4">**We'll never share your phone no with anyone else.</span>
+                </div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group row align-items-center">
+                <div class="col-3">
+                  <label for="edit-email">Email</label>
+                </div>
+                <div class="col-9">
+                  <input type="email" id="edit-email" class="form-control" value="abrilakh@gmail.com" />
+                  <span class="font-12 c4">**We'll never share your email with anyone else.</span>
+                </div>
+              </div>
+              <!-- End Form Group -->
+            </div>
+            <!-- End Edit Personal Info -->
+
+            <!-- Edit Skill -->
+            <div class="edit-skill">
+              <div class="row">
+                <div class="col-12">
+                  <h4 class="mb-3">Skill</h4>
+                </div>
+              </div>
+
+              <!-- Form Group -->
+              <div class="form-group mb-20 row align-items-center">
+                <div class="col-3">
+                  <label for="edit-ui">UI Design</label>
+                </div>
+                <div class="col-9">
+                  <div class="d-flex align-items-center">
+                    <input type="text" id="edit-ui" class="form-control" value="68%" />
+
+                    <div class="process-bar-wrapper style--five">
+                      <span class="process-bar" data-process-width="68"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group mb-20 row align-items-center">
+                <div class="col-3">
+                  <label for="edit-ux">UX Design</label>
+                </div>
+                <div class="col-9">
+                  <div class="d-flex align-items-center">
+                    <input type="text" id="edit-ux" class="form-control" value="85%" />
+
+                    <div class="process-bar-wrapper style--five pink">
+                      <span class="process-bar" data-process-width="85"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group mb-20 row align-items-center">
+                <div class="col-3">
+                  <label for="edit-html">HTML</label>
+                </div>
+                <div class="col-9">
+                  <div class="d-flex align-items-center">
+                    <input type="text" id="edit-html" class="form-control" value="35%" />
+
+                    <div class="process-bar-wrapper style--five green">
+                      <span class="process-bar" data-process-width="35"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group mb-20 row align-items-center">
+                <div class="col-3">
+                  <label for="edit-css">CSS</label>
+                </div>
+                <div class="col-9">
+                  <div class="d-flex align-items-center">
+                    <input type="text" id="edit-css" class="form-control" value="50%" />
+
+                    <div class="process-bar-wrapper style--five blue">
+                      <span class="process-bar" data-process-width="50"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group mb-0 row align-items-center">
+                <div class="col-3">
+                  <label for="edit-wp">Wordpress</label>
+                </div>
+                <div class="col-9">
+                  <div class="d-flex align-items-center">
+                    <input type="text" id="edit-wp" class="form-control" value="50%" />
+
+                    <div class="process-bar-wrapper style--five c2">
+                      <span class="process-bar" data-process-width="50"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Form Group -->
+            </div>
+            <!-- End Edit Skill -->
+          </div>
+        </div>
+        <!-- End Card -->
+      </div>
+      <div class="col-xl-6">
+        <!-- Card -->
+        <div class="card mb-30">
+          <div class="card-body p-30">
+            <!-- Account Setting -->
+            <div class="account-setting">
+              <div>
+                <h4 class="mb-20 pt-2">Account Setting</h4>
+              </div>
+
+              <!-- Form Group -->
+              <div class="form-group mb-4 d-flex align-items-center">
+                <div class="ml-3">
+                  <!-- Switch -->
+                  <label class="switch">
+                    <input type="checkbox" checked="checked" />
+                    <span class="control"></span>
+                  </label>
+                  <!-- End Switch -->
+                </div>
+                <div>Email me when someone comments onmy article</div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group mb-4 d-flex align-items-center">
+                <div class="ml-3">
+                  <!-- Switch -->
+                  <label class="switch">
+                    <input type="checkbox" checked="checked" />
+                    <span class="control"></span>
+                  </label>
+                  <!-- End Switch -->
+                </div>
+                <div>Email me when someone answers on my form</div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group mb-4 d-flex align-items-center">
+                <div class="ml-3">
+                  <!-- Switch -->
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="control"></span>
+                  </label>
+                  <!-- End Switch -->
+                </div>
+                <div>Invites me to co-own a moodboard</div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group mb-4 d-flex align-items-center">
+                <div class="ml-3">
+                  <!-- Switch -->
+                  <label class="switch">
+                    <input type="checkbox" checked="checked" />
+                    <span class="control"></span>
+                  </label>
+                  <!-- End Switch -->
+                </div>
+                <div>Receive an email summary of notifications instead of individual emails</div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group mb-20 d-flex align-items-center">
+                <div class="ml-3">
+                  <!-- Switch -->
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="control"></span>
+                  </label>
+                  <!-- End Switch -->
+                </div>
+                <div>Notifications about upcoming live events</div>
+              </div>
+              <!-- End Form Group -->
+
+              <div>
+                <h4 class="mb-20 pt-3">Activity</h4>
+              </div>
+
+              <!-- Form Group -->
+              <div class="form-group mb-4 d-flex align-items-center">
+                <div class="ml-3">
+                  <!-- Switch -->
+                  <label class="switch">
+                    <input type="checkbox" checked="checked" />
+                    <span class="control"></span>
+                  </label>
+                  <!-- End Switch -->
+                </div>
+                <div>Blocked users will no longer be allowed to: follow you, see your work in their feed.</div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group mb-4 d-flex align-items-center">
+                <div class="ml-3">
+                  <!-- Switch -->
+                  <label class="switch">
+                    <input type="checkbox" checked="checked" />
+                    <span class="control"></span>
+                  </label>
+                  <!-- End Switch -->
+                </div>
+                <div>Receive an email summary of notifications instead of individual emails</div>
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group mb-10 d-flex align-items-center">
+                <div class="ml-3">
+                  <!-- Switch -->
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="control"></span>
+                  </label>
+                  <!-- End Switch -->
+                </div>
+                <div>Error saving: please try again later</div>
+              </div>
+              <!-- End Form Group -->
+            </div>
+            <!-- End Account Setting -->
+          </div>
+        </div>
+        <!-- End Card -->
+
+        <!-- Card -->
+        <div class="card mb-30">
+          <div class="card-body p-30">
+            <!-- Change Password -->
+            <div class="change-password">
+              <div>
+                <h4 class="mb-4 pt-2">Change Password</h4>
+              </div>
+
+              <!-- Form Group -->
+              <div class="form-group mb-4">
+                <label for="old-pass" class="bold font-14 mb-2 black">Old Password</label>
+                <input type="password" class="theme-input-style" id="old-pass" placeholder="********" />
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group mb-4">
+                <label for="new-pass" class="bold font-14 mb-2 black">New Password</label>
+                <input type="password" class="theme-input-style" id="new-pass" placeholder="********" />
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group mb-10">
+                <label for="retype-pass" class="bold font-14 mb-2 black">Retype Password</label>
+                <input type="password" class="theme-input-style" id="retype-pass" placeholder="********" />
+              </div>
+              <!-- End Form Group -->
+            </div>
+            <!-- End Change Password -->
+          </div>
+        </div>
+        <!-- End Card -->
+      </div>
+
+      <div class="col-12 text-right">
+        <!-- Button Group -->
+        <div class="button-group pt-1">
+          <button type="reset" class="link-btn bg-transparent ml-3 soft-pink">Cancel</button>
+          <button type="button" class="btn">Save Changes</button>
+        </div>
+        <!-- End Button Group -->
+      </div>
+    </div>
+  </form>
+  <!-- End Form -->
+{% endblock %}

@@ -11,7 +11,7 @@ import datetime
 from django.core.exceptions import ValidationError
 from django.urls import reverse
 from utilisateurs.models import *
-from utilisateurs.forms import RegisterViewForm, userUpdateForm
+from utilisateurs.forms import RegisterViewForm
 from django.contrib.auth import authenticate, login, logout
 
 
@@ -88,6 +88,15 @@ def ProfileView(request):
         'profile':profile,
     }
     return render(request,'dashboard/profile.html', context)
+
+
+
+@login_required(login_url='/accounts/login/')
+def profile_edit(request):
+    context = {}
+    return render(request,'dashboard/profileuseredit.html', context)
+
+
 
 
 

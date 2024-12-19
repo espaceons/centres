@@ -60,8 +60,8 @@
             </div>
           </a>
           <div class="dropdown-menu">
-            <a href="edit-profile.html">Edit Profile</a>
-            <a href="user-dashboard.html">User Dashboard</a>
+            <a href="{% url 'utilisateurs:editprofile' %}">Edit Profile</a>
+            <a href="{% url 'dashboard:home' %}">User Dashboard</a>
           </div>
         </div>
         <!-- End Dropdown Button -->
