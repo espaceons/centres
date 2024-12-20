@@ -20,11 +20,7 @@
           <div class="main-header-left h-100 d-flex align-items-center">
             <!-- Main Header User -->
             <div class="main-header-user">
-              <a
-                href="#"
-                class="d-flex align-items-center"
-                data-toggle="dropdown"
-              >
+              <a                href="#"                class="d-flex align-items-center"                data-toggle="dropdown"              >
                 <div class="menu-icon">
                   <span></span>
                   <span></span>
@@ -33,10 +29,7 @@
                 <div class="user-profile d-xl-flex align-items-center d-none">
                   <!-- User Avatar -->
                   <div class="user-avatar">
-                    <img
-                      src="{% static 'dashboard/assets/img/avatar/user.png' %}"
-                      alt=""
-                    />
+                    <img                      src="{% static 'dashboard/assets/img/avatar/user.png' %}"                      alt=""                    />
                   </div>
                   <!-- End User Avatar -->
 
@@ -44,7 +37,9 @@
                   <div class="user-info">
                     <!--Afficher utilisateur et email courant-->
                     <h4 class="user-name">{{ user.username }}</h4>
-                    <p class="user-email">{{ user.email }}</p>
+                    <h3 class="user-email">{{ user.email }}</h3>
+                    <h5 class="user-centre">{{ user.centre }}</h5>
+                    <h5 class="user-role">{{ user.role }}</h5>
                     <!--Afficher utilisateur et email courant-->
                   </div>
                   <!-- End User Info -->

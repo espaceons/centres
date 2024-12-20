@@ -23,37 +23,7 @@
   </div>
 </div>
 
-<!--<div class="site-section">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-5">
-                <div class="row">
-                    <div class="col-md-12 form-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" class="form-control form-control-lg">
-                    </div>
-                    <div class="col-md-12 form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" class="form-control form-control-lg">
-                    </div>
-                    <div class="col-md-12 form-group">
-                        <label for="pword">Password</label>
-                        <input type="password" id="pword" class="form-control form-control-lg">
-                    </div>
-                    <div class="col-md-12 form-group">
-                        <label for="pword2">Re-type Password</label>
-                        <input type="password" id="pword2" class="form-control form-control-lg">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <input type="submit" value="Register" class="btn btn-primary btn-lg px-5">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>-->
+
 <form action="" method="POST">
     {% csrf_token %}
 
@@ -62,6 +32,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-5">
                     <div class="row">
+
                         <div class="col-md-12 form-group">
                             <label for="first_name">username</label>
                             {{ form.username }}
@@ -72,17 +43,18 @@
                             <label for="first_name">first_name</label>
                             {{ form.first_name }}
                         </div>
+
                         <div class="col-md-12 form-group">
                             <label for="last_name">last_name</label>
                             {{ form.last_name }}
                         </div>
+
                         <div class="col-md-12 form-group">
                             <label for="email">Email</label>
                             {{ form.email }}
                         </div>
 
                          
-                 
                         <div class="col-md-12 form-group">
                             <label for="centre">Centre</label>
                             {{ form.centre }}
@@ -93,12 +65,11 @@
                             {{ form.role }}
                         </div>
                         
-                       
-                        
                         <div class="col-md-12 form-group">
                             <label for="password">Password</label>
                             {{ form.password }}
                         </div>
+
                         <div class="col-md-12 form-group">
                             <label for="password2">Re-type Password</label>
                             {{ form.password2 }}

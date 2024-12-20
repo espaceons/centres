@@ -24,119 +24,38 @@
          <!-- End Sidebar -->
          {% block content %}
          <!-- Main Content -->
-         <div class="main-content">
+         
             <div class="container-fluid">
                 <!-- Card -->
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="pt-2 mb-4">Product Catelog</h4>
+                        <h4 class="pt-2 mb-4">Listes de Personnels</h4>
                         <!-- Product Grid -->
                         <div class="product-grid pt-2">
                             <div class="row">
-                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
-                                    <div class="product-grid-item mb-30">
-                                        <div class="product-img mb-3">
-                                             <a href="{% url 'dashboard:detailadmin' %}">
-                                                <img src="{% static 'dashboard/assets/img/product/pg1.png' %}" class="w-100" alt="">
-                                             </a>
-                                        </div>
-                                        <div class="product-content">
-                                            <h6 class="mb-10">Mohamed tekaya</h6>
-                                             <a href="product-details.html">
-                                                <p class="black">3pc Outdoor Set - Grey/Grey</p>
-                                             </a>
-                                        </div>
-                                    </div>
-                                    <!-- End Product Grid Item -->
-                                </div>
-                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
-                                    <div class="product-grid-item mb-30">
-                                       <div class="product-img mb-3">
-                                          <a href="product-details.html">
-                                             <img src="{% static 'dashboard/assets/img/product/pg2.png' %}" class="w-100" alt="">
+                              {% for p in listepersonnelle %}
+                              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                 <!-- Product Grid Item -->
+                                 <div class="product-grid-item mb-30">
+                                     <div class="product-img mb-3">
+                                          <a href="{% url 'dashboard:detailadmin' %}">
+                                             <img src="{% static 'dashboard/assets/img/product/pg1.png' %}" class="w-100" alt="">
                                           </a>
-                                       </div>
-                                       <div class="product-content">
-                                          <h6 class="mb-10">$24</h6>
+                                     </div>
+                                     <div class="product-content">
+                                         <h6 class="mb-10">{{p.username}}</h6>
                                           <a href="product-details.html">
-                                             <p class="black">Left Arm Patio Loveseat</p>
+                                             <p class="black">{{p.role}}</p>
                                           </a>
-                                       </div>
-                                    </div>
-                                    <!-- End Product Grid Item -->
-                                </div>
-                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
-                                    <div class="product-grid-item mb-30">
-                                        <div class="product-img mb-3">
-                                          <a href="product-details.html">
-                                             <img src="{% static 'dashboard/assets/img/product/pg3.png' %}" class="w-100" alt="">
-                                          </a>
-                                        </div>
-                                        <div class="product-content">
-                                            <h6 class="mb-10">$24</h6>
-                                            <a href="product-details.html">
-                                               <p class="black">Felton Tufted Sofa - Gray</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- End Product Grid Item -->
-                                </div>
-                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
-                                    <div class="product-grid-item mb-30">
-                                       <div class="product-img mb-3">
-                                       <a href="product-details.html">
-                                          <img src="{% static 'dashboard/assets/img/product/pg4.png' %}" class="w-100" alt="">
-                                       </a>
-                                       </div>
-                                       <div class="product-content">
-                                          <h6 class="mb-10">$24</h6>
-                                          <a href="product-details.html">
-                                             <p class="black">Trellis Elevated Fretwork </p>
-                                          </a>
-                                       </div>
-                                    </div>
-                                    <!-- End Product Grid Item -->
-                                </div>
-                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
-                                    <div class="product-grid-item mb-30">
-                                       <div class="product-img mb-3">
-                                          <a href="product-details.html">
-                                             <img src="{% static 'dashboard/assets/img/product/pg5.png' %}" class="w-100" alt="">
-                                          </a>
-                                       </div>
-                                       <div class="product-content">
-                                          <h6 class="mb-10">$24</h6>
-                                          <a href="product-details.html">
-                                             <p class="black">Valencia Area Rug</p>
-                                          </a>
-                                       </div>
-                                    </div>
-                                    <!-- End Product Grid Item -->
-                                </div>
-                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
-                                    <div class="product-grid-item mb-30">
-                                       <div class="product-img mb-3">
-                                       <a href="product-details.html">
-                                          <img src="{% static 'dashboard/assets/img/product/pg6.png' %}" class="w-100" alt="">
-                                       </a>
-                                       </div>
-                                       <div class="product-content">
-                                          <h6 class="mb-10">$24</h6>
-                                          <a href="product-details.html">
-                                             <p class="black">Sullivan Swivel Glider Chair</p>
-                                          </a>
-                                       </div>
-                                    </div>
-                                    <!-- End Product Grid Item -->
-                                </div>
-                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
+                                     </div>
+                                 </div>
+                                 <!-- End Product Grid Item -->
+                             </div>
+                              {% endfor %}
+                                
+                                
+                                <!--<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                   
                                     <div class="product-grid-item mb-30">
                                        <div class="product-img mb-3">
                                           <a href="product-details.html">
@@ -150,10 +69,10 @@
                                           </a>
                                        </div>
                                     </div>
-                                    <!-- End Product Grid Item -->
+                                    
                                 </div>
                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
+                                    
                                     <div class="product-grid-item mb-30">
                                        <div class="product-img mb-3">
                                           <a href="product-details.html">
@@ -167,10 +86,10 @@
                                           </a>
                                        </div>
                                     </div>
-                                    <!-- End Product Grid Item -->
+                                    
                                 </div>
                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
+                                    
                                     <div class="product-grid-item mb-30">
                                        <div class="product-img mb-3">
                                           <a href="product-details.html">
@@ -184,10 +103,10 @@
                                           </a>
                                        </div>
                                     </div>
-                                    <!-- End Product Grid Item -->
+                                    
                                 </div>
                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
+                                    
                                     <div class="product-grid-item mb-30">
                                        <div class="product-img mb-3">
                                           <a href="product-details.html">
@@ -201,10 +120,10 @@
                                           </a>
                                        </div>
                                     </div>
-                                    <!-- End Product Grid Item -->
+                                   
                                 </div>
                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
+                                    
                                     <div class="product-grid-item mb-30">
                                        <div class="product-img mb-3">
                                           <a href="product-details.html">
@@ -218,10 +137,10 @@
                                           </a>
                                        </div>
                                     </div>
-                                    <!-- End Product Grid Item -->
+                                    
                                 </div>
                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
+                                    
                                     <div class="product-grid-item mb-30">
                                        <div class="product-img mb-3">
                                           <a href="product-details.html">
@@ -235,10 +154,10 @@
                                           </a>
                                        </div>
                                     </div>
-                                    <!-- End Product Grid Item -->
+                                   
                                 </div>
                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
+                                   
                                     <div class="product-grid-item mb-30">
                                        <div class="product-img mb-3">
                                        <a href="product-details.html">
@@ -252,10 +171,10 @@
                                           </a>
                                        </div>
                                     </div>
-                                    <!-- End Product Grid Item -->
+                                    
                                 </div>
                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
+                                    
                                     <div class="product-grid-item mb-30">
                                        <div class="product-img mb-3">
                                           <a href="product-details.html">
@@ -269,10 +188,10 @@
                                           </a>
                                        </div>
                                     </div>
-                                    <!-- End Product Grid Item -->
+                                    
                                 </div>
                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
+                                    
                                     <div class="product-grid-item mb-30">
                                        <div class="product-img mb-3">
                                           <a href="product-details.html">
@@ -286,10 +205,10 @@
                                           </a>
                                        </div>
                                     </div>
-                                    <!-- End Product Grid Item -->
+                                  
                                 </div>
                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
+                                  
                                     <div class="product-grid-item mb-30">
                                        <div class="product-img mb-3">
                                           <a href="product-details.html">
@@ -303,10 +222,10 @@
                                           </a>
                                        </div>
                                     </div>
-                                    <!-- End Product Grid Item -->
+                                    
                                 </div>
                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
+                                    
                                     <div class="product-grid-item mb-30">
                                        <div class="product-img mb-3">
                                           <a href="product-details.html">
@@ -320,10 +239,10 @@
                                           </a>
                                        </div>
                                     </div>
-                                    <!-- End Product Grid Item -->
+                                    
                                 </div>
                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
+                                    
                                     <div class="product-grid-item mb-30">
                                        <div class="product-img mb-3">
                                           <a href="product-details.html">
@@ -337,7 +256,7 @@
                                           </a>
                                        </div>
                                     </div>
-                                    <!-- End Product Grid Item -->
+                                    
                                 </div>
                                 <div class="col-xl-12">
                                     <!-- Pagination -->
@@ -354,7 +273,7 @@
                                        <p class="font-12">Showing 20 items of 124</p>
                                     </div>
                                     <!-- End Pagination -->
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                         <!-- End Product Grid -->
@@ -362,7 +281,7 @@
                 </div>
                 <!-- End Card -->
             </div>
-         </div>
+
          <!-- End Main Content -->
                      <!-- End Main Content -->
          {% endblock content %}
@@ -381,6 +300,4 @@
    <!--Scripts-->
 </body>
 
-</html>
-  </body>
 </html>

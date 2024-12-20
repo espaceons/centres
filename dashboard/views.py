@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+
+from utilisateurs.models import CustomUser
 # Create your views here.
 
 
@@ -10,7 +12,10 @@ def home(request):
 
 @login_required(login_url='/accounts/login/')
 def administrations(request):
-    context = {}
+    listepersonnelle = CustomUser.objects.all()
+    context = {
+        'listepersonnelle':listepersonnelle,
+    }
     return render(request,'centres/administrations.html', context)
 
 @login_required(login_url='/accounts/login/')

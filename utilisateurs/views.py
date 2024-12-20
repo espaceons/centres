@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.conf import settings
-from django.core.mail import EmailMessage
+
 from django.utils import timezone
 import datetime
 from django.core.exceptions import ValidationError
@@ -15,6 +15,14 @@ from utilisateurs.forms import RegisterViewForm
 from django.contrib.auth import authenticate, login, logout
 
 
+
+
+
+
+# activation email
+
+    
+    
 # logout
 
 def logoutView(request):
@@ -28,6 +36,8 @@ def loginView(request):
     message=''
     if request.method == 'POST':
         form = forms.LoginViewForm(request.POST)
+        if CustomUser.is_email_verified:
+                messages.add_message(request,messages.ERROR,'pas de verification')
         if form.is_valid():
             user = authenticate(username=form.cleaned_data['username'], password=form.cleaned_data['password'])
             if user is not None:
@@ -40,6 +50,7 @@ def loginView(request):
                 return redirect('dashboard:home')
             else:
                 message = 'Identifiant non valid'
+                         
     context ={
         'form':form,
         'message':message,
@@ -56,12 +67,16 @@ def RegisterView(request):
         form = RegisterViewForm(request.POST)
         if form.is_valid():
             new_user = form.save(commit=False)
+            new_user.is_active = False
             new_user.set_password(form.cleaned_data['password'])
             new_user.save()
+
+                
+         
             context = {
             'new_user':new_user,
         }
-            return render(request, 'utilisateur/login.html', context)
+            return redirect('utilisateurs:login')
     else:
         form = RegisterViewForm()
     context = {
